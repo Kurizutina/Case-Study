@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jon Kryz Portfolio Website</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/webp" href="images/Sunny_Good_Ending_Title_Screen.webp"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    .background-image {
+      background-color: #020617;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navbar-nav .home-link:hover,
+    .navbar-nav .portfolio-link:hover {
+      background-image: url("images/tulipjpg.jpg");
+      background-size: cover;
+    }
+
+    .navbar-nav .about-link:hover {
+      background-image: url("images/gladiolus.jpg");
+      background-size: cover;
+    }
+
+    .navbar-nav .contact-link:hover {
+      background-image: url("images/rose.jpg");
+      background-size: cover;
+    }
+
+    .home h1 {
+      font-size: 50px;
+      white-space: nowrap;
+    }
+
+    .home h3 {
+      font-size: 2rem;
+    }
+
+    .custom-box {
+      background-color: black;
+      color: white;
+      text-transform: uppercase;
+      border: 3px solid white;
+      font-size: 20px;
+      height: 50px;
+      text-align: center;
+      transition: background-color 0.3s, color 0.3s;
+      font-family: omoriFont;
+      padding: 0 20px;
+      line-height: 44px;
+    }
+
+    .custom-box:hover {
+      background-color: white;
+      color: black;
+      text-decoration: none;
+    }
+
+    .navbar-brand {
+      color: white;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar {
+      background-color: transparent;
+    }
+
+    .jonkryz p {
+      font-family: omoriFont;
+      font-size: 40px;
+      color: white;
+      text-transform: uppercase;
+    }
+
+    .navbar-nav {
+      text-align: center;
+      flex-wrap: wrap;
+    }
+
+    .custom-navbar {
+      background-color: #020617;
+      min-height: 80px;
+    }
+
+    .text-bg {
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url('images/klee.gif');
+      background-size: cover;
+      background-position: center;
+      text-align: left;
+      padding-left: 200px;
+      padding-top: 150px;
+      padding-bottom: 150px;
+    }
+
+    .logo {
+      width: 40px;
+      margin-right: auto;
+    }
+
+    .course-dashboard {
+      background-color: #020617;
+      color: white;
+    }
+
+    .custom-btn {
+      background-color: #020617;
+      color: white;
+      font-size: 14px;
+      font-family: pkmnFont;
+      border: 1px solid white;
+      padding: 15px 30px;
+      margin: 10px;
+    }
+
+    .custom-btn:hover {
+      background-color: #2E4053;
+    }
+
+    .info {
+      display: inline-block;
+    }
+
+    .biog a{
+      color: white;
+      font-size: 40px;
+      font-family: pkmnfont;
+      text-decoration: none;
+    }
+
+    .biog h4{
+      color: #d8d9dd;
+      font-family: omoriFont;
+    }
+
+    .biog h2{
+      color: #d8d9dd;
+      font-family: omoriFont2;
+      font-size: 40px;
+    }
+
+    .biog li, strong, p, blockquote{
+      font-size: 25px;
+      color: #dadde2;
+      font-family: omoriFont;
+    }
+
+    .biog figcaption{
+      font-size: 17px;
+      color: #dadde2;
+      font-family: omoriFont;
+    }
+
+    .gallery-item{
+      display: flex;
+      overflow-x: auto;
+      gap: 15px;
+      padding-bottom: 10px;
+    }
+
+
+    .gallery-item img {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      padding-bottom: 10px;
+    }
+
+    .gallery-item img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .square-img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 884px) {
+      .text-bg {
+        padding: 1rem;
+        text-align: center;
+      }
+
+      .home h1 {
+        font-size: 28px;
+        white-space: normal;
+        margin: auto;
+      }
+
+      .home h3 {
+        font-size: 23px;
+      }
+
+      .jonkryz p {
+        font-size: 30px;
+      }
+
+      .custom-box {
+        font-size: 20px;
+        height: auto;
+      }
+
+      .navbar-brand{
+        margin: auto;
+      }
+    }
+</style>
+
+</head>
+<body class="background-image">
+  <nav class="navbar custom-navbar px-4">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <div class="navbar-brand text-white">
+        <img src="images/Snaley_29.webp" class="logo">
+        <span class="jonkryz"><p>KURIZU</p></span>
+      </div>
+      <ul class="navbar-nav d-flex flex-row justify-content-center gap-3">
+        <li class="nav-item">
+          <a class="nav-link custom-box home-link" href="casestudy.html">Home Page</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link custom-box about-link" href="about.html">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link custom-box contact-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="home flex-grow-1 d-flex flex-column pt-4">
+    <div class="text-bg">
+      <h1 style="font-family: omoriFont2;">ABOUT PAGE</h1>
+      <h3>This page is all about Jon Kryz.</h3>
+      <h3>This is dedicated to know his biography, educations/academics, and etc.</h3>
+    </div>
+  </main>
+
+  <section class="course-dashboard container-fluid d-flex flex-column flex-md-row justify-content-between py-5">
+
+    <div class="left-panel me-md-5 mb-4 mb-md-0 d-flex flex-column px-5">
+      <div class="module mb-4">
+        <h1>Jon Kryz Nathan G. Francisco</h1>
+        <h4>A 1st Year Student at Nueva Ecija University of Science and Technology,</h4>
+        <h4>currently pursuing Bachelor of Science in Information and Communication Technology.</h4>
+        <h4>He is the creator of this website.</h4>
+      </div>
+      <div class="info">
+        <a href="#profile" class="btn custom-btn"> PROFILE</a>
+        <a href="#bio" class="btn custom-btn"> BIOGRAPHY</a>
+        <a href="#edu" class="btn custom-btn"> EDUCATION</a>
+        <a href="#exp" class="btn custom-btn"> EXPERIENCE</a>
+        <a href="#achieve" class="btn custom-btn"> ACHIEVEMENT</a>
+        <a href="#philosophy" class="btn custom-btn">PHILOSOPHY</a>
+        <a href="#favourite" class="btn custom-btn"> FAVOURITE</a>
+        <a href="#triv" class="btn custom-btn">TRIVIA</a>
+        <a href="#gallery" class="btn custom-btn">GALLERY</a>
+      </div>
+    </div>
+  
+    <div class="right-panel px-5">
+      <div class="user-profile mb-4 p-3 border border-white rounded" style="background-color:#020617;">
+        <h1 class="text-center">ADVENTURER CARD</h1><hr>
+        <h3>ADVENTURER: Jon Kryz Nathan G. Francisco</h3><hr>
+        <h3>AFFILIATION: BSIT 1-K</h3><hr>
+        <h3>LEVEL: 18</h3><hr>
+        <h3>DATE JOINED: January 21, 2007</h3><hr>
+        <h3>HOMETOWN: 161 Purok 2, Malayantoc, Sto. Domingo, Nueva Ecija, 3113</h3>
+      </div>
+  
+      <div class="hobbies mb-4 p-3 border border-white rounded" style="background-color:#020617;">
+        <h1 class="text-center">HOBBIES</h1><hr>
+        <h3>* Playing an instrument like guitar and violin</h3><hr>
+        <h3>* Reading books or visual novels</h3><hr>
+        <h3>* Working out at home</h3><hr>
+        <h3>* Playing video games</h3><hr>
+      </div>
+  
+      <div class="hobbies mb-4 p-3 border border-white rounded" style="background-color:#020617;">
+        <h1 class="text-center">SKILLS</h1><hr>
+        <h4 class="text-center">Programming Skills</h4>
+        <h3>HTML, CSS, JAVASCRIPT: Beginner > Intermediate </h3>
+        <h3>C++: Intermediate</h3>
+        <h3>PYTHON: Beginner</h3>
+        <h3>PHP: Beginner</h3><hr>
+        <h4 class="text-center">Soft skills</h4>
+        <h3>* Creativity * Adaptability * Teamwork * Communication * Time management</h3><hr>
+      </div>
+    </div>
+  
+  </section>
+
+  <section id="profile" class="w-100 py-4" style="margin: 0; padding: 0 20px;">
+    <div class = "biog">
+      <a href="#profile">Profile</a><hr style="color: white;">
+      <h2>APPEARANCE</h2>
+      <p>OMORI is a young boy who wears a black tank top, long black socks, and black and white striped shorts. He is the only character to be colored black and white in contrast with the colorful residents of HEADSPACE, and he is also the only character to have blank eyes with no pupils. His overall design stems from SUNNY's twelve-year-old appearance.</p>
+      <h2>PERSONALITY</h2>
+      <p>Not much can be said about OMORI's personality, as he is a silent protagonist. However, it is implied that he is quite melancholic, as his narration sometimes has gloomy inputs, the overall tone left by the summary, and his final battle dialogue is directly talking down to SUNNY. His abilities are also reflective of this gloominess, being either violent in nature or simply gaining the SAD emotion, or having an advantage while SAD. However, it can be speculated that this is moreso reflective of SUNNY's emotional state, as OMORI is a character built from SUNNY'S conscience in WHITE SPACE and HEADSPACE.</p>
+  </section>
+
+  <section id="bio" class="w-100 py-4" style="margin: 0; padding: 0 20px;">
+    <div class = "biog">
+      <a href="#bio">Biography</a><hr style="color: white;">
+      <h2>BACKGROUND</h2>
+      <h4>Jon Kryz Nathan G. Francisco is a passionate and driven first-year student at the Nueva Ecija University of Science and Technology, currently pursuing a Bachelor of Science in Information and Communication Technology. With a deep curiosity for technology and innovation, Jon Kryz is steadily building his foundation in programming, web development, and system design.</h4>
+      <h4>From a young age, he has been fascinated by how things work behind the screen—this curiosity has grown into a genuine desire to develop solutions, create digital experiences, and continuously learn new skills. Outside academics, he enjoys playing musical instruments like the guitar and violin, reading, gaming, and staying active through home workouts.</h4>
+      <h4>He created this website as both a personal portfolio and a space to showcase his journey, skills, and growth as a future IT professional. With each project and line of code, Jon Kryz aims to not just learn but to inspire others who are starting out in tech as well.</h4>
+    </div>
+  </section>
+
+  <section id="edu" class="w-100 py-4" style="margin: 0; padding: 0 20px;">
+    <div class = "biog">
+      <a href="#edu">Education</a><hr style="color: white;">
+      <p>
+        I am currently pursuing a <strong>Bachelor of Science in Information and Communication Technology</strong> at the
+        <strong>Nueva Ecija University of Science and Technology</strong>. I embarked on this journey in 2024 and have
+        gained invaluable knowledge in web development, programming, and digital communication. My courses have equipped
+        me with the skills to understand both the technical and creative aspects of technology, and I am excited to apply
+        them in real-world projects.
+      </p>
+      <p>
+        Prior to university, I completed my <strong>Senior High School</strong> at [Your SHS Name], where I focused on the
+        [Your Strand] strand. The experience helped me develop a strong foundation in various subjects, especially in
+        mathematics, technology, and communication. This education has inspired me to pursue a career that blends my
+        interest in technology with my passion for problem-solving.
+      </p>
+      <p>
+        My <strong>Junior High School</strong> journey took place at [Your JHS Name]. It was during these years that I first
+        became interested in technology and started exploring coding, which eventually led me to pursue a degree in ICT.
+        The teachers and curriculum were fundamental in shaping my early academic interests, and I’ll always be grateful for
+        the foundation they provided me.
+      </p>
+  </section>
+
+  <section id="exp" class="w-100 py-4" style="margin: 0; padding: 0 20px;">
+    <div class = "biog">
+      <a href="#exp">Experience</a><hr style="color: white;">
+      <p>
+        My professional journey began with an <strong>internship at [Company Name]</strong> in [Year], where I worked as
+        a web development intern. During my time there, I was involved in designing and developing several small web
+        projects, collaborating with a talented team of developers and designers. This internship gave me hands-on experience
+        with front-end development, coding languages like HTML, CSS, JavaScript, and PHP, and understanding the workflow of a
+        professional development environment.
+      </p>
+      <p>
+        In addition to my internship, I have also worked as a <strong>volunteer web developer</strong> for a local
+        organization, [Organization Name]. Here, I assisted in building a website to promote the organization's mission and
+        increase its online visibility. This experience enhanced my problem-solving and teamwork abilities, as I collaborated
+        with a group of passionate individuals to create a functional, aesthetically pleasing site.
+      </p>
+      <p>
+        As a <strong>freelance web developer</strong>, I have had the opportunity to work on various projects, from designing
+        personal blogs to creating portfolio websites for other developers. Through these freelance gigs, I have been able to
+        refine my skills, learn new tools, and understand the needs of clients. Each project has challenged me to think
+        creatively and work efficiently, and I look forward to taking on more projects in the future.
+      </p>
+    </div>
+  </section>
+
+  <section id="achieve" class="w-100 py-4" style="margin: 0; padding: 0 20px;">
+    <div class = "biog">
+      <a href="#achieve">Achievement</a><hr style="color: white;">
+      <p>
+        One of my most rewarding achievements was completing the <strong>Responsive Web Design Certification</strong> from
+        FreeCodeCamp. This course enhanced my skills in creating flexible, user-friendly websites that adapt to various
+        screen sizes. I gained a deeper understanding of CSS Grid, Flexbox, and media queries, and I am proud of the
+        projects I completed during the course.
+      </p>
+      <p>
+        In 2022, I participated in the <strong>National Coding Competition</strong> and placed second. It was an exciting
+        opportunity to showcase my coding skills and learn from other talented developers. The competition tested my
+        abilities in problem-solving and algorithm design, and it motivated me to continue pushing my limits in the tech
+        industry.
+      </p>
+      <p>
+        Another notable achievement was developing a <strong>Library Management System</strong> as my final project for a
+        PHP course I took during my studies. The system allows users to search for books, borrow items, and manage their
+        accounts. It was a practical way to apply my programming knowledge and create something that could be used by
+        others in real life.
+      </p>
+    </div>
+  </section>
+
+  <section id="philosophy" class="w-100 py-4" style="margin: 0; padding: 0 20px;">
+    <div class = "biog">
+      <a href="#philosophy">Philosophy</a><hr style="color: white;">
+      <p>
+        My personal philosophy is rooted in the belief that learning never stops. I strive to embrace challenges, adapt to
+        new environments, and continuously improve myself, both professionally and personally. I believe failure is an
+        essential part of growth, as each setback provides valuable lessons that help me move forward with greater
+        understanding.
+      </p>
+      <p>
+        I also believe in the power of collaboration and teamwork. While individual effort is important, the collective
+        strength of a team can produce extraordinary results. I am passionate about contributing my skills to projects
+        where creativity and cooperation are at the forefront.
+      </p>
+      <p>
+        My motto is simple: “Keep learning, keep growing.” Life is full of opportunities to discover new things, and I
+        approach each day with curiosity and excitement for what lies ahead.
+      </p>
+    </div>    
+  </section>
+
+  <section id="favourite" class="w-100 py-4" style="margin: 0; padding: 0 20px;">
+    <div class = "biog">
+      <a href="#favourite">Favourites</a><hr style="color: white;">
+      <blockquote class="blockquote">
+        “The only way to do great work is to love what you do.” – Steve Jobs
+      </blockquote>
+      <p>
+        This quote has always resonated with me. I believe that passion and dedication are the keys to success. When you
+        truly love what you do, it doesn’t feel like work—it becomes a natural part of who you are, and you’ll constantly
+        strive to improve and innovate. It's a reminder to pursue what excites and motivates you, because only then can you
+        truly excel.
+      </p>
+    </div>
+  </section>
+
+  <section id="triv" class="w-100 py-4" style="margin: 0; padding: 0 20px;">
+    <div class = "biog">
+      <a href="#triv">TRIVIA</a><hr style="color: white;">
+      <p>* According to OMOCAT, OMORI was originally named OMORIBOY and first appeared in his own blog, which was named after him and lasted from December 22nd, 2011 to March 14th, 2012.</p>
+      <p style="margin-left: 50px;">* OMOCAT used the OMORIBOY blog for self-expression and to vent out their turbulent feelings as a troubled young adult. The character's loneliness also inspired OMOCAT to create a world of pure imagination</p>
+      <p style="margin-left: 50px;">* This version of OMORI is depicted as a depressed hikikomori, and appears much older in appearance. Some bits of this characterization would later be used for his original self SUNNY.</p>
+      <p style="margin-left: 50px;">* Many posts there show OMORIBOY's inner thoughts about himself and the world around him. Some of his traits in the blog are used for his current portrayal in the final game, but toned down.</p>
+      <p>* OMORI was originally planned to have an AFRAID emotion but this was scrapped, most likely due to OMORI being normally incapable of expressing fear. This was given to SUNNY instead in the final game. The 2018 Kickstarter demo's coding still contains data of OMORI's AFRAID emotion.</p>
+      <p style="margin-left: 50px;">* OMORI was also meant to have a TOAST emotion when downed in battle, like with the other party members. This was replaced with a DEFEATED sprite in the full game's release. blog are used for his current portrayal in the final game, but toned down.</p>
+      <p style="margin-left: 50px;">* The looping background for the FACES OF OMORI subarea contains a blurred version of OMORI's old battle faces from that build, with the unused AFRAID battle portrait included within the background.</p>
+      <p style="margin-left: 50px;">* The final fight of the console-exclusive BASIL RUSH event subverts this by having OMORI actually becoming AFRAID, only after bringing the opponent down to 20% HEART or lower. The portrait used depicts a younger SUNNY's horrified reaction to something he shouldn't have seen.</p>
+    </div>
+  </section>
+
+  <section id="gallery" class="w-100 py-4 px-3">
+    <div class="biog text-white">
+        <a href="#gallery" class="text-white text-decoration-none fs-4">GALLERY</a>
+        <hr style="color: white;">
+        <h2>SCHOOL</h2>
+      
+        <div class="gallery-item row g-3">
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <figure class="figure text-center">
+                    <img src="images/photo_2025-04-20_15-11-02.jpg" class="img-fluid square-img" alt="Image 1">
+                    <figcaption class="figure-caption">my kindergarden moving up.</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <figure class="figure text-center">
+                    <img src="images/photo_2025-04-20_15-11-02 (2).jpg" class="img-fluid square-img" alt="Image 2">
+                    <figcaption class="figure-caption">Me and my mom on my JHS moving up. I'm glad i met my friends after the lockdown.</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <figure class="figure text-center">
+                    <img src="images/jon1.jpg" class="img-fluid square-img" alt="Image 2">
+                    <figcaption class="figure-caption">A famous photographer took a picture of me.</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <figure class="figure text-center">
+                    <img src="images/photo_2025-04-20_15-11-01.jpg" class="img-fluid square-img" alt="Image 2">
+                    <figcaption class="figure-caption">Our Class advisory ask me if he could take a picture of me. Of course I agreed without hesitation.</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+              <figure class="figure text-center">
+                  <img src="images/lab.jpg" class="img-fluid square-img" alt="Image 2">
+                  <figcaption class="figure-caption">My hands were shaking so hard when i was handling the lab.</figcaption>
+              </figure>
+          </div>
+
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <figure class="figure text-center">
+                <img src="images/photo_2025-04-20_15-15-22.jpg" class="img-fluid square-img" alt="Image 2">
+                <figcaption class="figure-caption">A friend of friend of mine took a picture of us. It was so hot wearing a toga but it was worth it.</figcaption>
+            </figure>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <figure class="figure text-center">
+              <img src="images/photo_2025-04-20_15-29-04.jpg" class="img-fluid square-img" alt="Image 2">
+              <figcaption class="figure-caption">I was focusing too much on the exam so i didn't notice my friend took a picture.</figcaption>
+          </figure>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <figure class="figure text-center">
+            <img src="images/photo_2025-04-20_15-29-46.jpg" class="img-fluid square-img" alt="Image 2">
+            <figcaption class="figure-caption">Awarding day!!, that 2 weeks of work finally paid off.</figcaption>
+        </figure>
+    </div>
+
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+      <figure class="figure text-center">
+          <img src="images/photo_2025-04-20_15-34-58.jpg" class="img-fluid square-img" alt="Image 2">
+          <figcaption class="figure-caption">The theme was corporate outfit so i just wore what i found on the closet.</figcaption>
+      </figure>
+  </div>
+
+  <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+    <figure class="figure text-center">
+        <img src="images/photo_2025-04-20_15-34-14.jpg" class="img-fluid square-img" alt="Image 2">
+        <figcaption class="figure-caption">My best friends... Julian and Andrew, and Me! I'm so proud of us!!!</figcaption>
+    </figure>
+</div>
+          </div>
+        <br>
+
+  
+        <h2>FRIENDS</h2>
+        <div class="gallery-item row g-3">
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <figure class="figure text-center">
+                    <img src="images/ryo.jpg" class="img-fluid square-img" alt="Image 2">
+                    <figcaption class="figure-caption">Omori lying on the surface of White Space.</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+                <figure class="figure text-center">
+                    <img src="images/lab.jpg" class="img-fluid square-img" alt="Image 2">
+                    <figcaption class="figure-caption">Omori lying on the surface of White Space.</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+              <figure class="figure text-center">
+                  <img src="images/ryo.jpg" class="img-fluid square-img" alt="Image 2">
+                  <figcaption class="figure-caption">Omori lying on the surface of White Space.</figcaption>
+              </figure>
+          </div>
+
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+              <figure class="figure text-center">
+                  <img src="images/lab.jpg" class="img-fluid square-img" alt="Image 2">
+                  <figcaption class="figure-caption">Omori lying on the surface of White Space.</figcaption>
+              </figure>
+          </div>
+
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <figure class="figure text-center">
+                <img src="images/ryo.jpg" class="img-fluid square-img" alt="Image 2">
+                <figcaption class="figure-caption">Omori lying on the surface of White Space.</figcaption>
+            </figure>
+        </div>
+          </div>
+
+</section>
+</body>
+</html>

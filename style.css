@@ -1,0 +1,47 @@
+@font-face{
+    font-family: omoriFont;
+    src: url(font/Omori-fonts/omori2.ttf);
+}
+
+@font-face{
+    font-family: omoriFont2;
+    src: url(font/Omori-fonts/omori1.ttf);
+}
+
+@font-face{
+    font-family: minefont;
+    src: url(font/minecraft/Minecraft.ttf);
+}
+
+@font-face{
+    font-family: serffont;
+    src: url(font/anewserif/anewserifintownF.ttf);
+}
+
+@font-face{
+    font-family: pkmnfont;
+    src: url(font/PKMN/pokemon.ttf);
+}
+
+main h1{
+    font-family: omoriFont;
+    color: whitesmoke;
+    width: 250px;
+    height: auto;
+}
+
+main h2, main h3, main h4{
+    font-family:omoriFont;
+    color: whitesmoke;
+
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    font-family:omoriFont;
+    color: whitesmoke;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+

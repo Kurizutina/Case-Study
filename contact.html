@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jon Kryz Portfolio Website</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/webp" href="images/Sunny_Good_Ending_Title_Screen.webp"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    .background-image {
+      background-color: #020617;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navbar-nav .home-link:hover,
+    .navbar-nav .portfolio-link:hover {
+      background-image: url("images/tulipjpg.jpg");
+      background-size: cover;
+    }
+
+    .navbar-nav .about-link:hover {
+      background-image: url("images/gladiolus.jpg");
+      background-size: cover;
+    }
+
+    .navbar-nav .contact-link:hover {
+      background-image: url("images/rose.jpg");
+      background-size: cover;
+    }
+
+    .home h1 {
+      font-size: 50px;
+      white-space: nowrap;
+    }
+
+    .home h3 {
+      font-size: 2rem;
+    }
+
+    .custom-box {
+      background-color: black;
+      color: white;
+      text-transform: uppercase;
+      border: 3px solid white;
+      font-size: 20px;
+      height: 50px;
+      text-align: center;
+      transition: background-color 0.3s, color 0.3s;
+      font-family: omoriFont;
+      padding: 0 20px;
+      line-height: 44px;
+    }
+
+    .custom-box:hover {
+      background-color: white;
+      color: black;
+      text-decoration: none;
+    }
+
+    .navbar-brand {
+      color: white;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar {
+      background-color: transparent;
+    }
+
+    .jonkryz p {
+      font-family: omoriFont;
+      font-size: 40px;
+      color: white;
+      text-transform: uppercase;
+    }
+
+    .navbar-nav {
+      text-align: center;
+      flex-wrap: wrap;
+    }
+
+    .custom-navbar {
+      background-color: #020617;
+      min-height: 80px;
+    }
+
+    .text-bg {
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url('images/morn.gif');
+      background-size: cover;
+      background-position: center;
+      text-align: left;
+      padding-left: 200px;
+      padding-top: 150px;
+      padding-bottom: 150px;
+    }
+
+    .logo {
+      width: 40px;
+      margin-right: auto;
+    }
+
+    .course-dashboard {
+      background-color: #020617;
+      color: white;
+    }
+
+    .custom-btn {
+      background-color: #020617;
+      color: white;
+      font-size: 15px;
+      font-family: pkmnFont;
+      border: 1px solid white;
+      padding: 10px 30px;
+      margin: 10px;
+    }
+
+    .custom-btn:hover {
+      background-color: #2E4053;
+    }
+
+    .info {
+      display: inline-block;
+    }
+
+    .biog a {
+      color: white;
+      font-size: 40px;
+      font-family: pkmnfont;
+      text-decoration: none;
+    }
+
+    .biog h4 {
+      color: #d8d9dd;
+      font-family: omoriFont;
+    }
+
+    .biog li, strong, p, blockquote, label {
+      font-size: 25px;
+      color: #dadde2;
+      font-family: omoriFont;
+    }
+
+    .social-icon {
+      font-size: 2.5rem;
+      color: white;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .social-icon:hover {
+      transform: scale(1.2);
+      color: #ffccd5;
+    }
+
+    .contact-form label {
+      font-family: omoriFont;
+      font-size: 18px;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+
+    .omori-input {
+      background-color: #0f172a;
+      color: #ffffff;
+      border: 2px solid white;
+      font-family: omoriFont;
+      font-size: 18px;
+      padding: 10px;
+    }
+
+    .omori-input:focus {
+      background-color: #1e293b;
+      border-color: #ffccd5;
+      box-shadow: none;
+      color: white;
+    }
+
+    .social-icon {
+      font-size: 2.8rem;
+      color: #d9d9d9;
+      transition: transform 0.3s ease, text-shadow 0.3s ease, color 0.3s ease;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .social-icon:hover {
+      transform: scale(1.3);
+      text-shadow: 0 0 8px white;
+    }
+
+    .bi-facebook,
+    .bi-discord,
+    .bi-instagram,
+    .bi-github,
+    .bi-youtube,
+    .bi-twitch,
+    .bi-telegram,
+    .bi-envelope-fill {
+      color: #d9d9d9;
+    }
+
+    .bi-facebook:hover     { color: #1877F2; text-shadow: 0 0 8px #1877F2; }
+    .bi-discord:hover      { color: #5865F2; text-shadow: 0 0 8px #5865F2; }
+    .bi-instagram:hover    { color: #E1306C; text-shadow: 0 0 8px #E1306C; }
+    .bi-github:hover       { color: #ffffff; text-shadow: 0 0 8px #ffffff; }
+    .bi-youtube:hover      { color: #FF0000; text-shadow: 0 0 8px #FF0000; }
+    .bi-twitch:hover       { color: #9146FF; text-shadow: 0 0 8px #9146FF; }
+    .bi-telegram:hover     { color: #229ED9; text-shadow: 0 0 8px #229ED9; }
+    .bi-envelope-fill:hover{ color: #D44638; text-shadow: 0 0 8px #D44638; }
+
+    @media (max-width: 884px) {
+      .text-bg {
+        padding: 1rem;
+        text-align: center;
+      }
+
+      .home h1 {
+        font-size: 28px;
+        white-space: normal;
+        margin: auto;
+      }
+
+      .home h3 {
+        font-size: 23px;
+      }
+
+      .jonkryz p {
+        font-size: 30px;
+      }
+
+      .custom-box {
+        font-size: 20px;
+        height: auto;
+      }
+
+      .navbar-nav {
+        display: block;
+        text-align: left;
+      }
+
+      .navbar-brand {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .navbar-nav .nav-item {
+        margin: 10px 0;
+      }
+
+      .container {
+        width: 100%;
+        padding: 0 1rem;
+      }
+
+      .social-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .social-icon {
+        font-size: 2.5rem;
+        margin: 10px;
+      }
+
+      .navbar-brand{
+        margin: auto;
+      }
+
+      .bi-facebook    { color: #1877F2; text-shadow: 0 0 8px #1877F2; }
+    .bi-discord    { color: #5865F2; text-shadow: 0 0 8px #5865F2; }
+    .bi-instagram   { color: #E1306C; text-shadow: 0 0 8px #E1306C; }
+    .bi-github{ color: #ffffff; text-shadow: 0 0 8px #ffffff; }
+    .bi-youtube      { color: #FF0000; text-shadow: 0 0 8px #FF0000; }
+    .bi-twitch   { color: #9146FF; text-shadow: 0 0 8px #9146FF; }
+    .bi-telegram   { color: #229ED9; text-shadow: 0 0 8px #229ED9; }
+    .bi-envelope-fill{ color: #D44638; text-shadow: 0 0 8px #D44638; }
+    }
+  </style>
+</head>
+<body class="background-image">
+  <nav class="navbar custom-navbar px-4">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <div class="navbar-brand text-white">
+        <img src="images/Snaley_29.webp" class="logo">
+        <span class="jonkryz"><p>KURIZU</p></span>
+      </div>
+      <ul class="navbar-nav d-flex flex-row justify-content-center gap-3">
+        <li class="nav-item">
+          <a class="nav-link custom-box home-link" href="casestudy.html">Home Page</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link custom-box about-link" href="about.html">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link custom-box contact-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="home flex-grow-1 d-flex flex-column pt-4">
+    <div class="text-bg">
+      <h1 style="font-family: omoriFont2;">CONTACT PAGE</h1>
+      <h3>You can find my social media accounts here.</h3>
+      <h3>Message me through my email if you have any trouble.</h3>
+    </div>
+  </main>
+
+  <div class="container py-4 text-white" style="max-width: 600px;">
+    <h2 class="text-center mb-4" style="font-family: omoriFont2;">SEND A MESSAGE TO ME HERE</h2>
+    <div class="mb-3">
+      <label for="name" class="form-label">NAME</label>
+      <input type="text" class="form-control omori-input" id="name" name="name" required />
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">EMAIL</label>
+      <input type="email" class="form-control omori-input" id="email" name="_replyto" required />
+    </div>
+    <div class="mb-3">
+      <label for="message" class="form-label">MESSAGE</label>
+      <textarea class="form-control omori-input" id="message" name="message" rows="5" required></textarea>
+    </div>
+    <div class="text-center">
+      <button type="submit" class="btn custom-btn">SEND</button>
+    </div>
+  </div>
+
+  <div class="social-links text-center py-4">
+    <a href="https://www.facebook.com/jonkryz.francisco" target="_blank" class="social-icon mx-3">
+      <i class="bi bi-facebook"></i>
+    </a>
+    <a href="https://discord.com/users/661041828988190763" target="_blank" class="social-icon mx-3">
+      <i class="bi bi-discord"></i>
+    </a>
+    <a href="https://www.instagram.com/jkurizu/" target="_blank" class="social-icon mx-3">
+      <i class="bi bi-instagram"></i>
+    </a>
+    <a href="https://github.com/krulciferikaru" target="_blank" class="social-icon mx-3">
+      <i class="bi bi-github"></i>
+    </a>
+    <a href="https://www.youtube.com/@krlcfr" target="_blank" class="social-icon mx-3">
+      <i class="bi bi-youtube"></i>
+    </a>
+    <a href="https://www.twitch.tv/kurizuuu" target="_blank" class="social-icon mx-3">
+      <i class="bi bi-twitch"></i>
+    </a>
+    <a href="https://t.me/jkurizu" target="_blank" class="social-icon mx-3">
+      <i class="bi bi-telegram"></i>
+    </a>
+    <a href="mailto:kurisualt1998@gmail.com" class="social-icon mx-3">
+      <i class="bi bi-envelope-fill"></i>
+    </a>
+  </div>
+
+</body>
+</html>
